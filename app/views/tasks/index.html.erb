@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1>Tasks</h1>
+
+  <ul class="list-group list-group-flush">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item">
+        <%= task.completed ? "✅": "❌" %>
+        <%= link_to task.title, task_path(task) %>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
