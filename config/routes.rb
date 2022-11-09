@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # Read All
+  root to: 'tasks#index'
   get '/tasks', to: 'tasks#index', as: :tasks
 
   # Create new
